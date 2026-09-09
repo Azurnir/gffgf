@@ -11,28 +11,25 @@ const total = price * quantity;
 alert(`Стоимость заказа: ${total}`);
 
 // Задача 2. Площадь прямоугольника
-
 const width = Number(prompt("Введите ширину:"));
 const height = Number(prompt("Введите высоту:"));
 let area = width * height;
 alert("Площадь прямоугольника: " + area);
-// Задача 3. Цена со скидкой
-// TODO:
-// 1) получить price и discountPercent;
-// 2) вычислить размер скидки;
-// 3) вычислить итоговую цену;
-// 4) вывести итоговую цену.
-
+// Задача 3. Цена со скидко
+//использован прайс из первого задания
+const discountPercent = Number(prompt("Введите процент скидки:"));
+let discountAmount = price * (discountPercent / 100);
+let finalPrice = price - discountAmount;
+alert("Итоговая цена: " + finalPrice);
 // Задача 4. Минуты в часы и минуты
-// TODO:
-// 1) получить totalMinutes;
-// 2) hours = Math.trunc(totalMinutes / 60);
-// 3) minutes = totalMinutes % 60;
-// 4) вывести строку вида: "2 ч 5 мин".
+const totalMinutes = Number(prompt("Введите количество минут:"));
+let hours = Math.trunc(totalMinutes / 60);
+let minutes = totalMinutes % 60;
+alert(hours + " ч " + minutes + " мин");
 
 // Задача 5. Целая часть и остаток от деления
-// TODO:
-// 1) получить dividend и divisor;
-// 2) вычислить целую часть;
-// 3) вычислить остаток;
-// 4) вывести оба результата.
+const dividend = Number(prompt("Введите делимое:"));
+const divisor = Number(prompt("Введите делитель:"));
+let quotient = Math.trunc(dividend / divisor);
+let remainder = dividend % divisor;
+alert(divisionResult(dividend, divisor));

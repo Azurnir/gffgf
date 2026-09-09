@@ -14,8 +14,7 @@ function calculateOrderCost(price, quantity) {
 
 // 2. Площадь прямоугольника
 // Вернуть площадь прямоугольника.
-function rectangleArea(width, height) {
-
+function rectangleArea(width, height) { 
   let area = width * height;
   return area
 }
@@ -24,14 +23,18 @@ function rectangleArea(width, height) {
 // Вернуть итоговую цену после применения скидки в процентах.
 // Например: calculateDiscount(1000, 10) -> 900
 function calculateDiscount(price, discountPercent) {
-  // TODO
+let discountAmount = price * (discountPercent / 100);
+let finalPrice = price - discountAmount;
+return finalPrice
 }
 
 // 4. Минуты -> часы и минуты
 // Вернуть строку строго в формате: "2 ч 5 мин"
 // Например: minutesToHours(125) -> "2 ч 5 мин"
 function minutesToHours(totalMinutes) {
-  // TODO
+let hours = Math.trunc(totalMinutes / 60);
+let minutes = totalMinutes % 60;
+return hours + " ч " + minutes + " мин";
 }
 
 // 5. Целая часть и остаток от деления
@@ -39,7 +42,9 @@ function minutesToHours(totalMinutes) {
 // Сначала целая часть, затем остаток через точку с запятой.
 // Например: divisionResult(5, 2) -> "2;1"
 function divisionResult(dividend, divisor) {
-  // TODO
+let quotient = Math.trunc(dividend / divisor);
+let remainder = dividend % divisor;
+return quotient + ";" + remainder;
 }
 
 module.exports = {
